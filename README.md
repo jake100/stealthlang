@@ -9,31 +9,31 @@ Scripting language called stealth. Uses indentation-based syntax with optional p
 #main: is the entry point
 main:
 	i = 5
-  j = 2, k = 4, l = 8
+  	j = 2, k = 4, l = 8
 
 	arr = [0, "1", '2']
 	list = {0, "1"}
 	map = (a: "this is a", b: "this is b")
-  otherMap = (0: "cat", 1: "dog", 2: "mouse")
+  	otherMap = (0: "cat", 1: "dog", 2: "mouse")
 
-  #list is used like a list and can be used like a stack, all are tables like lua, classes are also tables
+  	#list is used like a list and can be used like a stack, all are tables like lua, classes are also tables
 	list.push('2')
-  list.pop()
+  	list.pop()
 
-  xRange = 4
-  xText = "This is x: "
+  	xRange = 4
+  	xText = "This is x: "
 
 	for x in range xRange:
 		print xText + x
 
-  for x in arr:
-    print x
+  	for x in arr:
+    		print x
 
 	for key, value in arr:
 		print key + ", " + value
 
-  for key, value in map:
-    print key + ", " + value
+  	for key, value in map:
+    		print key + ", " + value
 	
 	while i > 0:
 		print i--
@@ -47,7 +47,7 @@ main:
 	else:
 		print "else"
 
-  #optional parentesis means a function can be called like this or called one after another with , inbetween function calls
+  	#optional parentesis means a function can be called like this or called one after another with , inbetween function calls
 	func
 	func, otherFunc, func, otherFunc, func, func, func, otherFunc, otherFunc, otherFunc
 
@@ -68,13 +68,13 @@ funcParam(x, y):
 	cat.meow, cat.meow, cat.meow
 	tiger.meow, tiger.meow, tiger.meow
 
-  cat.catStuff, tiger.catStuff
+  	cat.catStuff, tiger.catStuff
 
-class Cat:
-  #members are private by default, public or protected can be called, then later members are st to either public or protected
+	class Cat:
+  	#members are private by default, public or protected can be called, then later members are st to either public or protected
 	x, y = 0
 	Cat(x, y):
-    #this is used to make the following variables to this, x and y is mapped to the private x and y members
+    		#this is used to make the following variables to this, x and y is mapped to the private x and y members
 		this x, y = x, y
 	privateFunction:
 		print "private"
