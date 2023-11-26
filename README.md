@@ -20,7 +20,7 @@ main:
 	list.push('2')
   	list.pop()
 
-  	xRange = 4
+  	final xRange = 4
   	xText = "This is x: "
 
 	for x in range xRange:
