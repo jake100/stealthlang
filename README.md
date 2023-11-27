@@ -1,18 +1,23 @@
 # stealthlang
-Scripting language called stealth. Uses indentation-based syntax with optional parenthesis.
+Scripting language called stealth. Uses indentation-based syntax with optional parenthesis and optional typing.
 
 
 
 ```
 #python style comments
 
-#import statement, file extension is .stlf
+#java style multiline comment
+/*
+this is all in a multiline comment.
+this also
+etc...
+*/
 
+#import statement, file extension is .stlf
 import otherFile.stlf
 import library.stlf as lib
 
 #global variables
-
 final title = "stealth"
 num = 42
 
@@ -66,6 +71,9 @@ main:
 	for x in range xRange:
 		print xText + x
 
+	for i = 0, i < 5, i++:
+		print i
+
   	for x in array:
     		print x
 
@@ -74,7 +82,10 @@ main:
 
   	for key, value in map:
     		print key + ", " + value
-	
+
+  	for key, value in table:
+    		print key + ", " + value
+
 	while i > 0:
 		print i--
 
