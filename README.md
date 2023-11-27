@@ -6,6 +6,16 @@ Scripting language called stealth. Uses indentation-based syntax with optional p
 ```
 #python style comments
 
+#import statement, file extension is .stlf
+
+import otherFile.stlf
+import library.stlf as lib
+
+#global variables
+
+final title = "stealth"
+num = 42
+
 #main: is the entry point
 main:
 	i = 5
@@ -38,6 +48,8 @@ main:
   	#list is used like a list and a stack
 	list.push('2')
   	list.pop()
+
+	lib.libFunc, print lib.libValue
 
   	final xRange = 4
   	xText = "This is x: "
@@ -108,6 +120,7 @@ string catFunc:
 	int x = 5, y = 4
 	bool b = true
 	string s = "string text", ss = "other text"
+	
 
 	// .. concatenates anything to anything
 	return b .. x .. y + ", " + s + ", " + ss
