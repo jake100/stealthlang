@@ -21,6 +21,13 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
+	randNum = rnd(5)
+	randRange = rnd(1, 8)
+	randInt = rnd(int)
+	randFloat = rnd(float)
+	randString = rnd(string)
+	randChar = rnd(char)
+
 	alive = true
 	dead = false
 
@@ -44,6 +51,8 @@ main:
 	table = <tString = "hello", tNum = 4, tFunc: return tString + ", " + tNum>
 
 	print table.tFunc
+
+	print array.len
 
   	#list is used like a list and a stack
 	list.push('2')
