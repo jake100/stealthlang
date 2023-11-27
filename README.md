@@ -11,12 +11,29 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
-	arr = [0, "1", '2']
+	alive = true
+	dead = false
+
+	notHere = null
+
+	#optional typing
+	bool b = true
+	int xNum = 0, yNum = 0
+	long xLong = 0L, yLong = 0L
+	float xx = 0.0f, yy = 0.0f
+	double xxx = 0.0, yyy = 0.0
+	string str = ""
+	char c = 'a'
+
+	#all arrays, lists, maps, sets and classes are tables
+	array = [0, "1", '2']
 	list = {0, "1"}
 	map = (a: "this is a", b: "this is b")
   	otherMap = (0: "cat", 1: "dog", 2: "mouse")
+	set = |0, 1, 2, 3|
+	table = <tableString = "", tableNum = 4, tableFunc: return "hello">
 
-  	#list is used like a list and can be used like a stack, all are tables like lua, classes are also tables
+  	#list is used like a list and a stack
 	list.push('2')
   	list.pop()
 
@@ -26,10 +43,10 @@ main:
 	for x in range xRange:
 		print xText + x
 
-  	for x in arr:
+  	for x in array:
     		print x
 
-	for key, value in arr:
+	for key, value in array:
 		print key + ", " + value
 
   	for key, value in map:
@@ -59,6 +76,7 @@ func:
 otherFunc:
 	print "hi"
 
+
 funcParam(x, y):
 	return x * y
 
@@ -70,7 +88,29 @@ funcParam(x, y):
 
   	cat.catStuff, tiger.catStuff
 
-	class Cat:
+typedParam(int x, int y):
+	return x + y
+
+constantFunc:
+
+	final
+
+	string s = "this can't be changed, "
+	string ss = "this also, "
+	string sss = "etc.."
+
+	return s + ss + sss
+
+#a type infront of a function means the function has to return that type
+string catFunc:
+	int x = 5, y = 4
+	bool b = true
+	string s = "string text", ss = "other text"
+
+	// .. concatenates anything to anything
+	return b .. ", " .. x .. ", " .. y .. ", " + s + ", " + ss
+
+class Cat:
   	#members are private by default, public or protected can be called, then later members are st to either public or protected
 	x, y = 0
 	Cat(x, y):
@@ -87,6 +127,12 @@ funcParam(x, y):
 	
 	meow:
 		print "meow"
+	#makes everything after this final
+	final
+
+	teeth = "sharp"
+	eyes = "wide open"
+
 
 class Tiger is a Cat:
 	claws = "sharp"
