@@ -23,6 +23,7 @@ num = 42
 
 #main: is the entry point
 main:
+	#dynamic typing by default
 	i = 5
   	j = 2, k = 4, l = 8
 
