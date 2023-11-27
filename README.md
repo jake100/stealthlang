@@ -31,7 +31,9 @@ main:
 	map = (a: "this is a", b: "this is b")
   	otherMap = (0: "cat", 1: "dog", 2: "mouse")
 	set = |0, 1, 2, 3|
-	table = <tableString = "", tableNum = 4, tableFunc: return "hello">
+	table = <tString = "hello", tNum = 4, tFunc: return tString + ", " + tNum>
+
+	print table.tFunc
 
   	#list is used like a list and a stack
 	list.push('2')
@@ -108,7 +110,7 @@ string catFunc:
 	string s = "string text", ss = "other text"
 
 	// .. concatenates anything to anything
-	return b .. ", " .. x .. ", " .. y .. ", " + s + ", " + ss
+	return b .. x .. y + ", " + s + ", " + ss
 
 class Cat:
   	#members are private by default, public or protected can be called, then later members are st to either public or protected
