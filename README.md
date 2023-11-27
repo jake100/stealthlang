@@ -70,6 +70,14 @@ main:
 
 	print funcParam(5, 5), print funcParam(6, 6), print funcParam(7, 7)
 
+	Cat cat = new Cat(5, 5)
+	Tiger tiger = new Tiger(10, 10)
+
+	cat.meow, cat.meow, cat.meow
+	tiger.meow, tiger.meow, tiger.meow
+
+  	cat.catStuff, tiger.catStuff
+
 func:
 	print "hello"
 
@@ -79,14 +87,6 @@ otherFunc:
 
 funcParam(x, y):
 	return x * y
-
-	Cat cat = new Cat(5, 5)
-	Tiger tiger = new Tiger(10, 10)
-
-	cat.meow, cat.meow, cat.meow
-	tiger.meow, tiger.meow, tiger.meow
-
-  	cat.catStuff, tiger.catStuff
 
 typedParam(int x, int y):
 	return x + y
