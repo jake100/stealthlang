@@ -51,7 +51,8 @@ main:
 		_ => print "on"
 
 	match type:
-		Off, High => print "not warm"
+		Off => print "cold"
+		High => print "hot"
 		Low, Medium => print "warm"
 
 	randNum = rnd(5)
