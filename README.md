@@ -239,10 +239,11 @@ main:
 		print "no match"
 
 	//oop in stealth, optional constructor parenthesis
-	Game game = new Game
+	game = new Game
+	xGame = new XGame
 
-	Cat cat = new Cat(5, 5)
-	Tiger tiger = new Tiger(10, 10)
+	cat = new Cat(5, 5)
+	tiger = new Tiger(10, 10)
 
 	cat.meow, cat.meow, cat.meow
 	tiger.meow, tiger.meow, tiger.meow
