@@ -44,6 +44,10 @@ main:
 	savedY = load("y")
 	savedAlive = load("alive")
 
+	#load and save a file
+	saveFile("notes.txt, "1: note to self...")
+	saveFile("notes.txt", loadFile("notes.txt") + "\n" + "2: second note to self...")
+
 	#pattern matching
     	m = 1
 	match m:
@@ -141,8 +145,6 @@ main:
 			x = 10, y = 10, z = 10, alive = rnd(bool), funcGame
 
 	print array.len
-
-	print '.' * 3
 
   	#list is used like a list and a stack
 	list.push('2')
