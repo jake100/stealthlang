@@ -50,8 +50,9 @@ main:
 	char c = 'a'
 
 	#all arrays, lists, maps, sets and classes are tables
-	zeroedArray = [8]
-	zeroedArray2D = [8][8]
+	zeroedArray = int [8]
+	zeroedArray2D = int [8][8]
+	emptyStringArray = string [12]
 	array = [0, "1", '2']
 	array2D = [1, 2, 3], [4, 5, 6], [7, 8, 9]
 	list = {0, "1"}
