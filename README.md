@@ -81,10 +81,10 @@ main:
 	zeroedArray2D = int [8][8]
 	emptyStringArray = string [12]
 	columns = 10, rows = 10, depth = 10
-	arrayInit = [columns] = 10
-	arrayInit2D = [columns][rows] = 1
-	#in the array definition columns get bound to _1 rows to _2 depth to _3 and so on for how many dimensions
-	arrayInit3D = [columns][rows][depth] = 3 * _1 * _2 * _3
+	arrayInit = for all [columns] = 10
+	arrayInit2D = for all [columns][rows] = 1
+	#in the for all definition first dimension gets bound to _1 second dimension gets bound to _2 third to _3 and so on for how many dimensions
+	arrayInit3D = for all [columns][rows][depth] = 3 * _1 * _2 * _3
 	array = [0, "1", '2']
 	array2D = [1, 2, 3], [4, 5, 6], [7, 8, 9]
 	list = {0, "1"}
