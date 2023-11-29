@@ -39,6 +39,8 @@ main:
 
 	type = Type.Off
 	highType = Type.High
+	mediumType = Type.Medium
+	lowType = Type.Low
 
 	match type:
 		Off => print "off"
@@ -50,10 +52,14 @@ main:
 		Off => print "off"
 		_ => print "on"
 
-	match type:
+	match type, lowType, mediumType, highType:
+		before:
+			print "-" * 12
 		Off => print "cold"
 		High => print "hot"
 		Low, Medium => print "warm"
+		after:
+			print "." * 12
 
 	randNum = rnd(5)
 	randFloat = rnd(5.0f)
@@ -110,9 +116,13 @@ main:
 	nums!
 		print x * y * z * i * j * k
 
-	firstClassFunc => return sqrt(pi ** 2)
+	firstClassFunc => return sqrt(pi ** 2) >> 2
 
 	print table.tFunc
+
+	pubVars!
+		while alive:
+			x = 10, y = 10, z = 10, alive = rnd(bool), pubVar
 
 	print array.len
 
@@ -248,6 +258,13 @@ main:
 func:
 	print "hello"
 
+pubVars:
+	public
+	bool alive = false
+	int x, y, z = 0, 0, 0
+
+	return alive? print x + ", " + y + ", " + z || print "sorry you are dead"
+
 otherFunc:
 	print "hi"
 
@@ -307,8 +324,8 @@ class Game:
 			update, render, sleep(1 / 60)
 			if rnd(5) == 0: alive = false
 			if rnd(50) == 0: undead = !undead
-			alive? print "you are alive" || print "you are dead"
-			if !alive and undead: print "and you are undead..."		
+			alive? print "you are alive." || undead? print "you are undead." || print "you are dead."
+			if !alive and !undead: print "dead for the last time."		
 	protected
 
 	update:
@@ -366,4 +383,5 @@ class Tiger is a Cat:
 	
 	meow:
 		print "grrr"
+
 ```
