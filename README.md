@@ -50,6 +50,10 @@ main:
 		Off => print "off"
 		_ => print "on"
 
+	match type:
+		Off, High => print "not warm"
+		Low, Medium => print "warm"
+
 	randNum = rnd(5)
 	randFloat = rnd(5.0f)
 	randDouble = rnd(5.0)
@@ -207,7 +211,7 @@ main:
 	print $m? "it matched" || "it did not match"
 	#$ infront of an integer gives the last matched expression's group at that index
 	print $1 + $2 + $3
-	print $m : $1 + $2 + $3, "no match"
+	print $m? $1 + $2 + $3 || "no match"
 
 	#$"name" for named groups
 	print $"name"
