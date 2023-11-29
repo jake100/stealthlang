@@ -148,7 +148,19 @@ main:
 
   	#list is used like a list and a stack
 	list.push('2')
-  	list.pop()
+	list.add(1)
+	list.dup(0)
+	list.sort
+	print list.peek(1)
+	list.swap(0, 2)
+	list.reverse
+  	list.pop
+	list.remove(0)
+	print "max: " + list.max + ", min: " + list.min + ", sum: " + list.sum
+
+	print list
+
+	list.clear
 
 	lib.libFunc, print lib.libValue
 
