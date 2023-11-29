@@ -214,7 +214,9 @@ main:
 	else:
 		print "no match"
 
-	//oop in stealth
+	//oop in stealth, optional constructor parenthesis
+	Game game = new Game
+
 	Cat cat = new Cat(5, 5)
 	Tiger tiger = new Tiger(10, 10)
 
@@ -226,13 +228,10 @@ main:
 	#more use of the ! syntax but with a class
 	cat! meow, meow, meow, meow, catStuff
 
-	cat!
-		meow, meow, catStuff, meow
-
 	if tiger instance of Tiger:
 		print "it's a tiger"
 
-	if cat instance of Cat, Bird, Mouse:
+	if cat instance of Cat or Bird or Mouse:
 		print "it's either a cat, bird or mouse"
 
 	guess = input("Enter something: ")
@@ -290,6 +289,16 @@ string typeIdentifier(anything):
 		return "Table"
 	return "unknown"
 
+class Game:
+	Game:
+		print "initilized..."
+		while true:
+			update, render, sleep(1 / 60)
+	update:
+		print "updating..."
+	render:
+		print "rendering..."
+	
 class Cat:
   	#members are private by default, public or protected can be called, then later members are st to either public or protected
 	x, y = 0
