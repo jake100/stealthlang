@@ -34,11 +34,12 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
-	#save variable and then load it for use
+	#save variable with a string as a key and anything as the value
 	save("x", 39)
 	save("y", 42)
 	save("alive", true)
 
+	#load a variable with a string as key
 	savedX = load("x")
 	savedY = load("y")
 	savedAlive = load("alive")
