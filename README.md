@@ -1,5 +1,5 @@
 # stealthlang
-Scripting language called stealth. Uses indentation-based syntax with optional parenthesis and optional typing. It's Python mixed with Lua with some Java so far mostly.
+Scripting language called stealth. Uses indentation-based syntax with optional parenthesis and optional static typing. It's Python mixed with Lua with some Java so far mostly.
 
 
 
@@ -29,6 +29,8 @@ main:
 
 	randNum = rnd(5)
 	randRange = rnd(1, 8)
+	randFLoatRange = rnd(0f, 5.5f)
+	randDoubleRange = rnd(0.0, 15.5)
 	randBool = rnd(bool)
 	randInt = rnd(int)
 	randFloat = rnd(float)
@@ -40,7 +42,7 @@ main:
 
 	notHere = null
 
-	#optional typing
+	#optional static typing
 	bool b = true
 	int xNum = 0, yNum = 0
 	long xLong = 0L, yLong = 0L
@@ -121,6 +123,7 @@ main:
 	funcToPass => print '.' * 3
 	tripleFunc(funcToPass)
 	tripleFunc( => print '!' * 3 )
+	tripleFunc(func)
 
 	Cat cat = new Cat(5, 5)
 	Tiger tiger = new Tiger(10, 10)
