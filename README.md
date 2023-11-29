@@ -83,8 +83,8 @@ main:
 	columns = 10, rows = 10, depth = 10
 	arrayInit = for all [columns] = 10
 	arrayInit2D = for all [columns][rows] = 1
-	#in the for all definition first dimension gets bound to _1 second dimension gets bound to _2 third to _3 and so on for how many dimensions
-	arrayInit3D = for all [columns][rows][depth] = 3 * _1 * _2 * _3
+	#in the for all definition first dimension gets bound to _0 second dimension gets bound to _1 third to _2 and so on for how many dimensions
+	arrayInit3D = for all [columns][rows][depth] = 3 * _0 * _1 * _2
 	array = [0, "1", '2']
 	array2D = [1, 2, 3], [4, 5, 6], [7, 8, 9]
 	list = {0, "1"}
@@ -92,6 +92,11 @@ main:
   	otherMap = (0: "cat", 1: "dog", 2: "mouse")
 	set = |0, 1, 2, 3|
 	table = <tString = "hello", tNum = 4, tFunc: return tString + ", " + tNum>
+	nums = <x = 0, y = 1, z = 2, i = 4, j = 8, k = 16>
+	print nums.x + ", " nums.y, + ", " + nums.z + ", " + nums.i + ", " + numbs.j + ", " + nums.k
+
+	#same thing but shorter with ! after the table to prevent repetition
+	nums! print x + ", " y + ", " + z + ", " + i + ", " + j ", " + k
 
 	firstClassFunc => return sqrt(pi ** 2)
 
@@ -131,6 +136,15 @@ main:
 
   	for key, value in table:
     		print key + ", " + value
+
+	#prints the value at each index with _
+	for array => print _
+
+	#prints the indexes of each dimension for every value in the array
+	for arrayInit3D => print _0 + ", " + _1 + ", " + _2
+
+	#doubles every value in the array
+	for array = _ ** 2
 
 	while i > 0:
 		print i--
@@ -204,6 +218,12 @@ main:
 	tiger.meow, tiger.meow, tiger.meow
 
   	cat.catStuff, tiger.catStuff
+
+	#more use of the ! syntax but with a class
+	cat! meow, meow, meow, meow, catStuff
+
+	cat!
+		meow, meow, catStuff, meow
 
 	if tiger instance of Tiger:
 		print "it's a tiger"
