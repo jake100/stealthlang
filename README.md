@@ -29,7 +29,16 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
+	#pattern matching
+    	m = 1
+	match m:
+		1 => print "one"
+		2 => print "two"
+		3 => print "three"
+		_ => print "anything"
+
 	Type type = Off
+	Type highType = High
 
 	match type:
 		Off => print "off"
@@ -71,6 +80,11 @@ main:
 	zeroedArray = int [8]
 	zeroedArray2D = int [8][8]
 	emptyStringArray = string [12]
+	columns = 10, rows = 10, depth = 10
+	arrayInit = [columns] = 10
+	arrayInit2D = [columns][rows] = 1
+	#in the array definition columns get bound to _1 rows to _2 depth to _3 and so on for how many dimensions
+	arrayInit3D = [columns][rows][depth] = 3 * _1 * _2 * _3
 	array = [0, "1", '2']
 	array2D = [1, 2, 3], [4, 5, 6], [7, 8, 9]
 	list = {0, "1"}
@@ -140,14 +154,10 @@ main:
 	tripleFunc(funcToPass)
 	tripleFunc( => print '!' * 3 )
 	tripleFunc(func)
-	
-	#pattern matching
-    	m = 1
-	match m:
-		1 => print "one"
-		2 => print "two"
-		3 => print "three"
-		_ => print "anything"
+
+	#f is asigned to a lambda that calls func then otherFunc then on the next line it is called 7 times, func will be called then otherFunc, 7 sets of times 
+	f => func, otherFunc
+	f, f, f, f, f, f, f
 
 	//regex funcitons
 	text = "0 look at the cats. All those cats."
@@ -172,8 +182,11 @@ main:
 	namedGroup = ms.group("name")
 
 	regex("(\w)(\w)(\w)(?<name>).*", "this will be matched then groups will be asigned to $1, $2, $3 then a group named name")
+	#$m returns true if last regex expression matched
+	print $m : "it matched", "it did not match"
 	#$ infront of an integer gives the last matched expression's group at that index
 	print $1 + $2 + $3
+	print $m : $1 + $2 + $3, "no match"
 
 	#$"name" for named groups
 	print $"name"
