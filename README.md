@@ -37,8 +37,8 @@ main:
 		3 => print "three"
 		_ => print "anything"
 
-	Type type = Off
-	Type highType = High
+	type = Type.Off
+	highType = Type.High
 
 	match type:
 		Off => print "off"
