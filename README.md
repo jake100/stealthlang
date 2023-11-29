@@ -27,9 +27,9 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
-	randBool = rnd(bool)
 	randNum = rnd(5)
 	randRange = rnd(1, 8)
+	randBool = rnd(bool)
 	randInt = rnd(int)
 	randFloat = rnd(float)
 	randString = rnd(string)
