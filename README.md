@@ -167,6 +167,8 @@ main:
 	list.push('2')
 	list.add(1)
 	list.dup(0)
+	list.multi(0, 5)
+	list(0) *= 3
 	list.sort
 	print list.peek(1)
 	list.swap(0, 2)
