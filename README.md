@@ -201,7 +201,7 @@ main:
 
 	regex("(\w)(\w)(\w)(?<name>).*", "this will be matched then groups will be asigned to $1, $2, $3 then a group named name")
 	#$m returns true if last regex expression matched
-	print $m : "it matched", "it did not match"
+	print $m? "it matched" || "it did not match"
 	#$ infront of an integer gives the last matched expression's group at that index
 	print $1 + $2 + $3
 	print $m : $1 + $2 + $3, "no match"
@@ -290,15 +290,36 @@ string typeIdentifier(anything):
 	return "unknown"
 
 class Game:
+	alive = true
+	undead = false
 	Game:
-		print "initilized..."
-		while true:
+		run: print "creating a new thread and starting the game loop", loop
+	loop:
+		while alive or undead:
 			update, render, sleep(1 / 60)
+			if rnd(5) == 0: alive = false
+			if rnd(50) == 0: undead = !undead
+			alive? print "you are alive" || print "you are dead"
+			if !alive and undead: print "and you are undead..."		
+	protected
+
 	update:
 		print "updating..."
 	render:
 		print "rendering..."
-	
+
+class XGame is a Game:
+	xs = 1
+	xStr = ""
+	XGame: super, print "died"
+
+	protected
+
+	update:
+		xStr += "x" * xs++ + "\n"
+	render:
+		print xStr
+
 class Cat:
   	#members are private by default, public or protected can be called, then later members are st to either public or protected
 	x, y = 0
@@ -325,7 +346,9 @@ class Cat:
 
 class Tiger is a Cat:
 	claws = "sharp"
-	
+	Tiger(x, y):
+		super(x, y)
+		print "after Cat's init"
 	public
 
 	growl:
