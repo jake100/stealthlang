@@ -6,8 +6,6 @@ Hello world example.
 main: print "hello world"
 ```
 
-Other elements of the language.
-
 ```
 #python style comments
 
