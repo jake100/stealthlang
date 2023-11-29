@@ -314,14 +314,20 @@ main:
 func:
 	print "hello"
 
+otherFunc:
+	print "hi"
+
+pointerFunction(*something):
+	something = "this is something"
+
+pointerFunctionInteger(*int number):
+	number++
+
 funcGame:
 	bool alive = false
 	int x, y, z = 0, 0, 0
 
 	return alive? print x + ", " + y + ", " + z || print "sorry you are dead"
-
-otherFunc:
-	print "hi"
 
 funcParam(x, y):
 	return x * y
