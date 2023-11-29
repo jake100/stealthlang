@@ -45,7 +45,10 @@ main:
 		Low => print "low"
 		Medium => print "medium"
 		High => print "high"
-		_ => print "default"
+
+	match highType:
+		Off => print "off"
+		_ => print "on"
 
 	randNum = rnd(5)
 	randFloat = rnd(5.0f)
