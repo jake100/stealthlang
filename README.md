@@ -1,7 +1,5 @@
 # stealthlang
-Scripting language called stealth. Uses indentation-based syntax with optional function parenthesis and optional static typing. It's Python mixed with Lua with some Java so far mostly.
-
-
+Scripting language called stealth. Uses indentation-based syntax with optional function parenthesis and optional static typing. It's Python mixed with Lua with some Java so far mostly, Gain all access of the languages features by default no imports to access language features.
 
 ```
 #python style comments
@@ -13,9 +11,10 @@ this also
 etc...
 */
 
-#import statement, file extension is .stlf
-import otherFile.stlf
-import library.stlf as lib
+#import statement, file extension is .stlf, file extension is omitted in import statement but all files must end in .st1f
+import otherFile as o
+import library as lib
+import thing from library as t
 
 #global variables
 final title = "stealth"
@@ -48,6 +47,7 @@ main:
 	randFloat = rnd(float)
 	randString = rnd(string, 12)
 	randChar = rnd(char)
+	randByte = rnd(byte)
 
 	alive = true
 	dead = false
@@ -63,6 +63,7 @@ main:
 	double xxx = 0.0, yyy = 0.0
 	string str = ""
 	char c = 'a'
+	byte by = 2
 
 	#all arrays, lists, maps, sets and classes are tables
 	zeroedArray = int [8]
