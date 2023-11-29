@@ -32,7 +32,7 @@ main:
 	randBool = rnd(bool)
 	randInt = rnd(int)
 	randFloat = rnd(float)
-	randString = rnd(string)
+	randString = rnd(string, 12)
 	randChar = rnd(char)
 
 	alive = true
