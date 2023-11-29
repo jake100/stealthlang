@@ -21,11 +21,23 @@ import library.stlf as lib
 final title = "stealth"
 num = 42
 
+enum Type:
+	Off, Low, Medium, High
+
 #main: is the entry point
 main:
 	#dynamic typing by default
 	i = 5
   	j = 2, k = 4, l = 8
+
+	Type type = Off
+
+	match type:
+		Off => print "off"
+		Low => print "low"
+		Medium => print "medium"
+		High => print "high"
+		_ => print "default"
 
 	randNum = rnd(5)
 	randRange = rnd(1, 8)
@@ -41,6 +53,7 @@ main:
 	dead = false
 
 	notHere = null
+	print notHere or "value is null"
 
 	#optional static typing
 	bool b = true
