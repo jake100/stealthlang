@@ -110,6 +110,12 @@ main:
 	randChar = rnd(char)
 	randByte = rnd(byte)
 
+	#pointers don't utilize pointer arithmetic
+	year = 2023
+	yr = &year
+	#prints 2023
+	print *yr
+
 	alive = true
 	dead = false
 
