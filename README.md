@@ -120,6 +120,7 @@ main:
 
 	print table.tFunc
 
+	#! syntax on a function
 	pubVars!
 		while alive:
 			x = 10, y = 10, z = 10, alive = rnd(bool), pubVar
