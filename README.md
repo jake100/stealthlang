@@ -133,6 +133,9 @@ main:
 
   	cat.catStuff, tiger.catStuff
 
+	if tiger instance of Tiger:
+		print "it's a tiger"
+
 	guess = input("Enter something: ")
 	print guess or "you did not enter anything"
 
@@ -157,6 +160,21 @@ nullFUnc:
 
 tripleFunc(Function func):
 	func, func, func
+
+typeIdentifier(anything):
+	if anything instance of int:
+		return "int"
+	elif anything instance of float:
+		return "float"
+	elif anything instance of Funtion:
+		return "Function"
+	elif anything instance of bool:
+		return "bool"
+	elif anything instance of Cat:
+		return "Cat"
+	elif anything instance of Table:
+		return "Table"
+	return "unknown"
 
 #a type infront of a function means the function has to return that type
 string catFunc:
