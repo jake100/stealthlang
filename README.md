@@ -63,7 +63,7 @@ main:
 	set = |0, 1, 2, 3|
 	table = <tString = "hello", tNum = 4, tFunc: return tString + ", " + tNum>
 
-	firstClassFunc => return pi * 2
+	firstClassFunc => return sqrt(pi ** 2)
 
 	print table.tFunc
 
@@ -152,9 +152,9 @@ typedParam(int x, int y):
 	return x + y
 
 nullFUnc:
-	string s = "this can't be changed, "
-	string ss = "this also, "
-	string sss = "etc.."
+	string s = "this can't be changed."
+	string ss = "this also."
+	string sss = "etc..."
 
 	return s + ss + sss
 
