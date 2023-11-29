@@ -34,6 +34,15 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
+	#save variable and then load it for use
+	save("x", 39)
+	save("y", 42)
+	save("alive", true)
+
+	savedX = load("x")
+	savedY = load("y")
+	savedAlive = load("alive")
+
 	#pattern matching
     	m = 1
 	match m:
