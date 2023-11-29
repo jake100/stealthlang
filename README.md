@@ -43,16 +43,24 @@ main:
 	strNum = str.parse int or 0
 	strFloat str2.parse float or 0.0f
 	strError = str3.parse bool or throw error "this is an error."
-	#save variable with a string as a key and anything as the value
+
+	#save variable with anything as the key and value to the languages key value store on disk
 	save("x", 39)
 	save("y", 42)
 	save("alive", true)
+	save(true, "it's all true.")
+	save(false, "it's all false")
+	save(0. "first save.")
+	save(1. "second save.")
 
 	#load a variable with a string as key
 	savedX = load("x")
 	savedY = load("y")
 	savedAlive = load("alive")
-
+	trueSave = load(true)
+	falseSave = load(false)
+	firstSave = load(0)
+	secondSave = load(1)
 	#load and save a file
 	saveFile("notes.txt, "1: note to self...")
 	saveFile("notes.txt", loadFile("notes.txt") + "\n" + "2: second note to self...")
