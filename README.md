@@ -39,9 +39,11 @@ main:
 		_ => print "default"
 
 	randNum = rnd(5)
+	randFloat = rnd(5.0f)
+	randDouble = rnd(5.0)
 	randRange = rnd(1, 8)
-	randFLoatRange = rnd(0f, 5.5f)
-	randDoubleRange = rnd(0.0, 15.5)
+	randFLoatRange = rnd(1f, 5.5f)
+	randDoubleRange = rnd(1.0, 15.5)
 	randBool = rnd(bool)
 	randInt = rnd(int)
 	randFloat = rnd(float)
@@ -221,7 +223,6 @@ nullFUnc:
 tripleFunc(Function func):
 	func, func, func
 
-
 #a type infront of a function means the function has to return that type
 string catFunc:
 	int x = 5, y = 4
@@ -230,6 +231,12 @@ string catFunc:
 	
 	// .. concatenates anything to anything
 	return b .. x .. y + ", " + s + ", " + ss
+
+isOdd(int num):
+	return num % 2 != 0
+
+#functions can be on be a single line
+oneLiner: print 0, print "...", print "..." * 3, print "...", print 99
 
 string typeIdentifier(anything):
 	if anything instance of int:
