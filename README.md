@@ -135,9 +135,9 @@ main:
 	print table.tFunc
 
 	#! syntax on a function
-	pubVars!
+	funcGame!
 		while alive:
-			x = 10, y = 10, z = 10, alive = rnd(bool), pubVars
+			x = 10, y = 10, z = 10, alive = rnd(bool), funcGame
 
 	print array.len
 
@@ -274,8 +274,7 @@ main:
 func:
 	print "hello"
 
-pubVars:
-	public
+funcGame:
 	bool alive = false
 	int x, y, z = 0, 0, 0
 
