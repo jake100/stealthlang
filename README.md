@@ -1,5 +1,5 @@
 # stealthlang
-Scripting language called stealth. Uses indentation-based syntax with optional parenthesis and optional static typing. It's Python mixed with Lua with some Java so far mostly.
+Scripting language called stealth. Uses indentation-based syntax with optional function parenthesis and optional static typing. It's Python mixed with Lua with some Java so far mostly.
 
 
 
