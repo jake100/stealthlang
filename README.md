@@ -30,7 +30,7 @@ enum Type:
 
 #main: is the entry point
 main:
-	#dynamic typing by default
+	#dynamic weak typing by default
 	i = 5
   	j = 2, k = 4, l = 8
 
@@ -122,7 +122,7 @@ main:
 	notHere = null
 	print notHere or "value is null"
 
-	#optional static typing
+	#optional strong static typing
 	bool b = true
 	int xNum = 0, yNum = 0
 	long xLong = 0L, yLong = 0L
