@@ -124,7 +124,50 @@ main:
 	tripleFunc(funcToPass)
 	tripleFunc( => print '!' * 3 )
 	tripleFunc(func)
+	
+	#pattern matching
+    	m = 1
+	match m:
+		1 => print "one"
+		2 => print "two"
+		3 => print "three"
+		_ => print "anything"
 
+	//regex funcitons
+	text = "0 look at the cats. All those cats."
+	#regex strings have to start with r infront of the ""
+	reg = r"\d"
+	#regex function string parameters don't need r
+	print search("\d", text)
+	#flag i = ignore case, flag s = . matches newline
+	otherReg = ris"ThE Case DoEsN't MaTtEr\nNeW lInEs GeT mAtChEd WiTh .\n"
+	print search(is"all", text)
+	print search(reg, text)
+	print all("cats", text)
+	words = split(" ", text)
+	lines = split(text)
+	threeLines = split("\n", text, 2)
+	subbed = sub("\s", 0, text)
+	twoSubbed = sub("\s", 0, text, 2)
+	ms = regex("\w", "this is the way")
+	print ms.matched
+	firstGroup = ms.group(0)
+	secondGroup = ms.group(1)
+	namedGroup = ms.group("name")
+
+	regex("(\w)(\w)(\w)(?<name>).*", "this will be matched then groups will be asigned to $1, $2, $3 then a group named name")
+	#$ infront of an integer gives the last matched expression's group at that index
+	print $1 + $2 + $3
+
+	#$"name" for named groups
+	print $"name"
+
+	if "isWord" =~ "[\w]":
+		print "match"
+	else:
+		print "no match"
+
+	//oop in stealth
 	Cat cat = new Cat(5, 5)
 	Tiger tiger = new Tiger(10, 10)
 
@@ -135,6 +178,9 @@ main:
 
 	if tiger instance of Tiger:
 		print "it's a tiger"
+
+	if cat instance of Cat, Bird, Mouse:
+		print "it's either a cat, bird or mouse"
 
 	guess = input("Enter something: ")
 	print guess or "you did not enter anything"
@@ -161,7 +207,17 @@ nullFUnc:
 tripleFunc(Function func):
 	func, func, func
 
-typeIdentifier(anything):
+
+#a type infront of a function means the function has to return that type
+string catFunc:
+	int x = 5, y = 4
+	bool b = true
+	string s = "string text", ss = "other text"
+	
+	// .. concatenates anything to anything
+	return b .. x .. y + ", " + s + ", " + ss
+
+string typeIdentifier(anything):
 	if anything instance of int:
 		return "int"
 	elif anything instance of float:
@@ -175,15 +231,6 @@ typeIdentifier(anything):
 	elif anything instance of Table:
 		return "Table"
 	return "unknown"
-
-#a type infront of a function means the function has to return that type
-string catFunc:
-	int x = 5, y = 4
-	bool b = true
-	string s = "string text", ss = "other text"
-	
-	// .. concatenates anything to anything
-	return b .. x .. y + ", " + s + ", " + ss
 
 class Cat:
   	#members are private by default, public or protected can be called, then later members are st to either public or protected
