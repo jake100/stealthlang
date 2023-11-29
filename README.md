@@ -50,7 +50,10 @@ main:
 	char c = 'a'
 
 	#all arrays, lists, maps, sets and classes are tables
+	zeroedArray = [8]
+	zeroedArray2D = [8][8]
 	array = [0, "1", '2']
+	array2D = [1, 2, 3], [4, 5, 6], [7, 8, 9]
 	list = {0, "1"}
 	map = (a: "this is a", b: "this is b")
   	otherMap = (0: "cat", 1: "dog", 2: "mouse")
@@ -79,6 +82,10 @@ main:
 
 	for i = 0, i < 5, i++:
 		print i
+
+	for x = 0, x < array2D.len, x++:
+		for y = 0, y < array2D[0].len, y++:
+			print x + ", " + y + " = " + array2D[x][y]
 
   	for x in array:
     		print x
