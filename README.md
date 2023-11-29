@@ -35,7 +35,7 @@ main:
 		1 => print "one"
 		2 => print "two"
 		3 => print "three"
-		_ => print "anything"
+		_ => print "anything else"
 
 	type = Type.Off
 	highType = Type.High
