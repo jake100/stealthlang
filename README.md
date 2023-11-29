@@ -313,6 +313,18 @@ funcParam(x, y):
 typedParam(int x, int y):
 	return x + y
 
+funcInFunc:
+	innerFunc:
+		print "..."
+	innerFunc, innerFunc, innerFunc, innerFunc
+
+privateMemberFunction:
+	private
+	#can't be accessed from out of function
+	int x, y, z
+	#can be called with privateMemberFunction.pos
+	public pos: print x + ", " + y + ", " + z
+
 nullFUnc:
 	string s = "this can't be changed."
 	string ss = "this also."
