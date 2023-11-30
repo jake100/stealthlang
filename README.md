@@ -34,15 +34,15 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
-	iString = string cast i
-	iFloat = float cast i
+	iBool = (bool) i
+	iFloat = (float) i
 
 	str = "55"
 	str2 = "10.5f"
 	str3 = "^*&^#"
-	strNum = str.parse int or 0
-	strFloat str2.parse float or 0.0f
-	strError = str3.parse bool or throw error "this is an error."
+	strNum = str.parse to int or 0
+	strFloat = str2.parse to float or 0.0f
+	strError = str3.parse to bool or throw error "this is an error."
 
 	#save variable with anything as the key and value to the languages key value store on disk
 	save("x", 39)
