@@ -179,7 +179,8 @@ main:
 	print list.peek(1)
 	list.swap(0, 2)
 	list.reverse
-  	list.pop
+  	item = list.pop
+	itemAtIndex = list.pop(2)
 	list.remove(0)
 	print "max: " + list.max + ", min: " + list.min + ", sum: " + list.sum
 
@@ -220,7 +221,7 @@ main:
 	#prints the indexes of each dimension for every value in the array
 	for arrayInit3D => print _0 + ", " + _1 + ", " + _2
 
-	#doubles every value in the array
+	#times the value by it's self for every value in the array
 	for array = _ ** 2
 
 	while i > 0:
