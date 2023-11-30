@@ -158,6 +158,11 @@ main:
 	nums!
 		print x * y * z * i * j * k
 
+	nums! table! print x + ", " + tNum
+	nums!
+		table!
+			print x + ", " tNum
+
 	firstClassFunc => return sqrt(pi ** 2) >> 2
 
 	print table.tFunc
