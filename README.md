@@ -165,7 +165,7 @@ main:
 	#! syntax on a function
 	funcGame!
 		while alive:
-			x = 10, y = 10, z = 10, alive = rnd(bool), funcGame
+			x = rnd(10), y = rnd(10), z = rnd(10), alive = rnd(bool), funcGame
 
 	print array.len
 
