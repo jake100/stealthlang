@@ -149,6 +149,7 @@ main:
 	set = |0, 1, 2, 3|
 	table = <tString = "hello", tNum = 4, tFunc: return tString + ", " + tNum>
 	nums = <x = 0, y = 1, z = 2, i = 4, j = 8, k = 16>
+
 	print nums.x + ", " nums.y, + ", " + nums.z + ", " + nums.i + ", " + nums.j + ", " + nums.k
 
 	#same thing but shorter with ! after the table to prevent repetition
