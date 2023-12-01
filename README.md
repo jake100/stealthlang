@@ -229,6 +229,9 @@ main:
   	for x in array:
     		print x
 
+	for letter in xText:
+		print letter
+
 	for key, value in array:
 		print key + ", " + value
 
