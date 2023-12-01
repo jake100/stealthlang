@@ -134,6 +134,15 @@ main:
 	notHere = null
 	print notHere or "value is null"
 
+	#do creates a new scope
+	do:
+		#variables of this scope not afiliated with the i, j, k, l in the upper scope
+		i = 0
+		j = 0, k = 0, l = 0
+
+		#modify i of the higher scope
+		this i = 0
+
 	#optional strong static typing
 	bool b = true
 	int xNum = 0, yNum = 0
