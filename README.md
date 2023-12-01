@@ -154,6 +154,7 @@ main:
 
 	alive = true
 	dead = false
+	undead = !alive
 
 	#prints true
 	print true or false
