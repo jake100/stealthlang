@@ -238,6 +238,20 @@ main:
 	#times the value by it's self for every value in the array
 	for array = _ ** 2
 
+	for 0..20:
+		print _
+
+	for 0..10:
+		for 0..10:
+			#_ prints the index of the first for loop then ^_ is the index of the second for loop
+			_ + ", " +  ^_
+
+	for 0..10:
+		for 0..10:
+			for 0..10:
+				#every loop adds a ^ in front the index for that for loop
+				_ + ", " + ^_ + ", " + ^^_
+
 	while i > 0:
 		print i--
 
@@ -362,7 +376,9 @@ privateMemberFunction:
 	#can be called with privateMemberFunction.pos
 	public pos: print x + ", " + y + ", " + z
 
-nullFUnc:
+constFUnc:
+	final
+	
 	string s = "this can't be changed."
 	string ss = "this also."
 	string sss = "etc..."
