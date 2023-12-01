@@ -143,6 +143,13 @@ main:
 	log("logs", "first log.")
 	log("logs", "this is the second log.")
 
+	time = now
+	print . * 10
+	after = now
+	print difference = after - time
+
+	print "it is " + now.hour + ":" + now.minute + ":" + now.second + now.am? "AM" || "PM" + " "+ now.year + "-" + now.month + "-" + now.day + " on a " + now.dayOfWeek + now.weekend? ", it's the weekend!" || "."
+\
 	#pattern matching
     	m = 1
 	match m:
@@ -249,6 +256,9 @@ main:
 	print p.y == 6
 	print p * p2
 	print p + p2
+	print p.move(2, 5)
+	p *= p2
+	print p.up + ", " + p.down + ", " + p.left + " " + p.right
 
 	#point with floating point x and y values
 	pf = point(0f, 7f)
@@ -263,16 +273,21 @@ main:
 	print rectangle * otherRec
 	print rectangle + p
 	print rectangle * p
+	print rectangle.intercepts(otherRec)
+	print rectangle.intercepts(p)
+	print rectangle.intercepts(4, 7)
 	print rectangle.x, print rectangle.y, print ractangle.width, print rectangle.height
 
 	red = Color(255, 0, 0)
 	green = Color(0, 255, 0)
 	blue = Color(0, 0, 255)
+	transRed = Color(255, 0, 0, 100)
 	r = Color.red
 	g = Color.green
 	b = Color.blue
 	w = Color.white
 	b = Color.black
+	t = Color.transparent
 
 	a0 = array.map(val : val + 2)
 	a1 = array.filter(val : val < 10)
