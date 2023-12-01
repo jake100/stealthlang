@@ -206,6 +206,8 @@ main:
 	pf = point(0f, 7f)
 	pd = point(0.0, 7.5)
 
+	p3d = point(0, 1, 3)
+
 	rectangle = box(0, 0, 5, 5)
 	otherRec = box(1, 1, 5, 5)
 	floatRec = box(0.1f, 1.4f, 5.5f, 5.5f)
