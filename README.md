@@ -75,7 +75,7 @@ main:
 	print text.startsWith("This is")
 	print text.strip
 	print text.lStrip
-	print text rStrip
+	print text.rStrip
 	print text.find("some")
 	print text.rFind("some")
 	print is "text" in text
