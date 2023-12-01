@@ -302,7 +302,7 @@ main:
 	else:
 		print "no match"
 
-	//oop in stealth, optional constructor parenthesis
+	//oop in stealth, optional constructor parenthesis, if it deosn't take parameters it doesn't need the ()
 	game = new Game
 	xGame = new XGame
 
