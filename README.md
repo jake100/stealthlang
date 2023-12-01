@@ -211,6 +211,8 @@ main:
 	floatRec = box(0.1f, 1.4f, 5.5f, 5.5f)
 	print rectangle + otherRec
 	print rectangle * otherRec
+	print rectangle + p
+	print rectangle * p
 	print rectangle.x, print rectangle.y, print ractangle.width, print rectangle.height
 
 	print nums.x + ", " nums.y, + ", " + nums.z + ", " + nums.i + ", " + nums.j + ", " + nums.k
