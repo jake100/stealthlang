@@ -20,7 +20,7 @@ etc...
 import otherFile as o
 import library as lib
 import thing from library as t
-#brings all w's public members into scope
+#brings all windows's public members into scope
 using window from graphicsLib
 
 #global variables
