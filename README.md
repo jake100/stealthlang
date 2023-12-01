@@ -49,7 +49,7 @@ main:
 	save("y", 42)
 	save("alive", true)
 	save(true, "it's all true.")
-	save(false, "it's all false")
+	save(false, "it's all false.")
 	save(0. "first save.")
 	save(1. "second save.")
 
