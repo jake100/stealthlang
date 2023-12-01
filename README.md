@@ -239,18 +239,16 @@ main:
 	for array = _ ** 2
 
 	for 0..20:
-		print _
+		print _ + "at " + _0
 
 	for 0..10:
 		for 0..10:
-			#_ prints the index of the first for loop then ^_ is the index of the second for loop
-			_ + ", " +  ^_
+			print _ + "at " + _0 + ", " + _1
 
 	for 0..10:
 		for 0..10:
 			for 0..10:
-				#every loop adds a ^ in front the index for that for loop
-				_ + ", " + ^_ + ", " + ^^_
+				print _ + "at " + _0 + ", " + _1 + ", " + _2
 
 	while i > 0:
 		print i--
