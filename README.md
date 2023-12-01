@@ -65,6 +65,10 @@ main:
 	saveFile("notes.txt, "1: note to self...")
 	saveFile("notes.txt", loadFile("notes.txt") + "\n" + "2: second note to self...")
 
+	#log creates the log file if it does not exist otherwise the first strings is the file name but without a file extension, the next string is added to the log, every log of same name adds to the file on a new line
+	log("logs", "first log.")
+	log("logs", "this is the second log.")
+
 	#pattern matching
     	m = 1
 	match m:
@@ -119,6 +123,14 @@ main:
 	alive = true
 	dead = false
 
+	#prints true
+	print true or false
+	print false or true
+
+	#prints false
+	print false or false
+	print true and false
+
 	notHere = null
 	print notHere or "value is null"
 
@@ -147,6 +159,7 @@ main:
 	map = (a: "this is a", b: "this is b")
   	otherMap = (0: "cat", 1: "dog", 2: "mouse")
 	set = |0, 1, 2, 3|
+	linkedList = /1, 2, 3, 4, 5, 6/
 	table = <tString = "hello", tNum = 4, tFunc: return tString + ", " + tNum>
 	nums = <x = 0, y = 1, z = 2, i = 4, j = 8, k = 16>
 
@@ -159,15 +172,14 @@ main:
 	nums!
 		print x * y * z * i * j * k
 
-
-	firstClassFunc => return sqrt(pi ** 2) >> 2
-
-	print table.tFunc
-
 	#! syntax on a function
 	funcGame!
 		while alive:
 			x = rnd(10), y = rnd(10), z = rnd(10), alive = rnd(bool), funcGame
+
+	firstClassFunc => return sqrt(pi ** 2) >> 2
+
+	print table.tFunc
 
 	print array.len
 
