@@ -392,7 +392,7 @@ string typeIdentifier(anything):
 		return "int"
 	elif anything instance of float:
 		return "float"
-	elif anything instance of Funtion:
+	elif anything instance of Function:
 		return "Function"
 	elif anything instance of bool:
 		return "bool"
