@@ -57,6 +57,24 @@ main:
 	strFloat = str2.parse to float or 0.0f
 	strError = str3.parse to bool or throw error "this is an error."
 
+	#math
+	print max(5, 8)
+	print min(2, 4)
+	print max(array)
+	print min(array)
+	print max [2, 3, 2, 4, 2, 5, 2]
+	print sqrt(9)
+	print abs(-8)
+	print round(5.5)
+	print round(5.5555,  2)
+	print ceil(4.5)
+	print floor(6)
+	print pi
+	print e
+	print cos * tan * sin * acos * asin * atan
+	print exp(1.0)
+	print log(1.0)
+
 	#save variable with anything as the key and value to the languages key value store on disk
 	save("x", 39)
 	save("y", 42)
