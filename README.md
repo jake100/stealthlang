@@ -187,7 +187,11 @@ main:
 	randString = rnd(string, 12)
 	randChar = rnd(char)
 	randByte = rnd(byte)
-
+	#a random array element gets asigned to randItem variable
+	randItem = rnd(array)
+	randLetter = rnd(str)
+	#returns an array value from the right with weights from the left that determine the odds of being chosen
+	w = weighted(4: "this", 5: "that", .5f: "and", 4: "what", 5: "ever")
 	#pointers don't utilize pointer arithmetic
 	year = 2023
 	yr = &year
