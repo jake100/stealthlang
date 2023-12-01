@@ -273,9 +273,9 @@ main:
 	print rectangle * otherRec
 	print rectangle + p
 	print rectangle * p
-	print rectangle.intercepts(otherRec)
-	print rectangle.intercepts(p)
-	print rectangle.intercepts(4, 7)
+	print rectangle.intersects(otherRec)
+	print rectangle.intersects(p)
+	print rectangle.intersects(4, 7)
 	print rectangle.x, print rectangle.y, print ractangle.width, print rectangle.height
 
 	red = Color(255, 0, 0)
