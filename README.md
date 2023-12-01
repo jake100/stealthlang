@@ -97,6 +97,7 @@ main:
 	print text.swapCase
 	print text.zFIll(5)
 	print text.center(20)
+	print text.center(20, "-")
 
 	#math
 	print max(5, 8)
