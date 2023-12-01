@@ -239,16 +239,16 @@ main:
 	for array = _ ** 2
 
 	for 0..20:
-		print _ + "at " + _0
+		print _0
 
 	for 0..10:
 		for 0..10:
-			print _ + "at " + _0 + ", " + _1
+			print _0 + ", " + _1
 
 	for 0..10:
 		for 0..10:
 			for 0..10:
-				print _ + "at " + _0 + ", " + _1 + ", " + _2
+				print _0 + ", " + _1 + ", " + _2
 
 	while i > 0:
 		print i--
