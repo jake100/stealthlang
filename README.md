@@ -34,6 +34,19 @@ main:
 	i = 5
   	j = 2, k = 4, l = 8
 
+	#optional strong static typing
+	bool b = true
+	int xNum = 0, yNum = 0
+	long xLong = 0L, yLong = 0L
+	float xx = 0.0f, yy = 0.0f
+	double xxx = 0.0, yyy = 0.0
+	string str = ""
+	char c = 'a'
+	byte by = 2
+
+	#alternate to setting a type, the type is infered from right hand side and the type can't be changed
+	allwaysInteger := 64
+
 	iBool = (bool) i
 	iFloat = (float) i
 
@@ -142,16 +155,6 @@ main:
 
 		#modify i of the higher scope
 		this i = 0
-
-	#optional strong static typing
-	bool b = true
-	int xNum = 0, yNum = 0
-	long xLong = 0L, yLong = 0L
-	float xx = 0.0f, yy = 0.0f
-	double xxx = 0.0, yyy = 0.0
-	string str = ""
-	char c = 'a'
-	byte by = 2
 
 	#all arrays, lists, maps, sets and classes are tables
 	zeroedArray = int [8]
