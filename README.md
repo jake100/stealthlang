@@ -21,7 +21,7 @@ import otherFile as o
 import library as lib
 import thing from library as t
 #brings all w's public members into scope
-import window from graphicsLib as w!
+using window from graphicsLib
 
 #global variables
 final title = "stealth"
