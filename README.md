@@ -264,6 +264,15 @@ main:
 	print rectangle * p
 	print rectangle.x, print rectangle.y, print ractangle.width, print rectangle.height
 
+	red = Color(255, 0, 0)
+	green = Color(0, 255, 0)
+	blue = Color(0, 0, 255)
+	r = Color.red
+	g = Color.green
+	b = Color.blue
+	w = Color.white
+	b = Color.black
+
 	a0 = array.map(val : val + 2)
 	a1 = array.filter(val : val < 10)
 	a2 = array.reduce(prev, curr : curr = prev + curr)
