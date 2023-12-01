@@ -194,6 +194,17 @@ main:
 	table = <tString = "hello", tNum = 4, tFunc: return tString + ", " + tNum>
 	nums = <x = 0, y = 1, z = 2, i = 4, j = 8, k = 16>
 
+	#point data type
+	p = point(0, 6), p2 = point(2, 7)
+	print p.x == 0
+	print p.y == 6
+	print p * p2
+	print p + p2
+
+	#point with floating point x and y values
+	pf = point(0f, 7f)
+	pd = point(0.0, 7.5)
+
 	print nums.x + ", " nums.y, + ", " + nums.z + ", " + nums.i + ", " + nums.j + ", " + nums.k
 
 	#same thing but shorter with ! after the table to prevent repetition
