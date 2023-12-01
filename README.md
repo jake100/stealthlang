@@ -63,6 +63,7 @@ main:
 	print max(array)
 	print min(array)
 	print max [2, 3, 2, 4, 2, 5, 2]
+	print min [3, 1, 3, 4, 5, 8, 2]
 	print sqrt(9)
 	print abs(-8)
 	print round(5.5)
