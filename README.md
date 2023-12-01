@@ -174,7 +174,6 @@ main:
 		#modify i of the higher scope
 		this i = 0
 
-	#all arrays, lists, maps, sets and classes are tables
 	zeroedArray = int [8]
 	zeroedArray2D = int [8][8]
 	emptyStringArray = string [12]
@@ -183,6 +182,8 @@ main:
 	arrayInit2D = for all [columns][rows] = 1
 	#in the for all definition first dimension gets bound to _0 second dimension gets bound to _1 third to _2 and so on for how many dimensions
 	arrayInit3D = for all [columns][rows][depth] = 3 * _0 * _1 * _2
+
+	#all arrays, lists, maps, sets and classes are tables
 	array = [0, "1", '2']
 	array2D = [1, 2, 3], [4, 5, 6], [7, 8, 9]
 	list = {0, "1"}
