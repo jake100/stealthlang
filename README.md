@@ -20,6 +20,8 @@ etc...
 import otherFile as o
 import library as lib
 import thing from library as t
+#brings all w's public members into scope
+import window from graphicsLib as w!
 
 #global variables
 final title = "stealth"
@@ -56,6 +58,45 @@ main:
 	strNum = str.parse to int or 0
 	strFloat = str2.parse to float or 0.0f
 	strError = str3.parse to bool or throw error "this is an error."
+
+	text = "This is some text."
+	otherText = "So is this."
+	letter2 = text[2]
+	lastLetter = text[-1]
+	slice = text[0:3]
+	toEndSlice = text[1:]
+	fromStartSlice = text[:3]
+	fString = f"{text} {otherText} This is an f string."
+	print text.upper
+	print text.lower
+	print text.title
+	print text.capitalize
+	print text.endsWith("error.")
+	print text.startsWith("This is")
+	print text.strip
+	print text.lStrip
+	print text rStrip
+	print text.find("some")
+	print text.rFind("some")
+	print is "text" in text
+	print is "cats" not in text
+	print text.isNum
+	print text.isAlpha
+	print text.isAlphaNum
+	print text.isAscii
+	print text.isDecimal
+	print text.isDigit
+	print text.isIdentifier
+	print text.isLower
+	print text.isUpper
+	print text.isTitle
+	print text.isPrintable
+	print text.isSpace
+	print text.lJust
+	print text.rJust
+	print text.swapCase
+	print text.zFIll(5)
+	print text.center(20)
 
 	#math
 	print max(5, 8)
@@ -218,6 +259,10 @@ main:
 	print rectangle * p
 	print rectangle.x, print rectangle.y, print ractangle.width, print rectangle.height
 
+	a0 = array.map(val : val + 2)
+	a1 = array.filter(val : val < 10)
+	a2 = array.reduce(prev, curr : curr = prev + curr)
+
 	print nums.x + ", " nums.y, + ", " + nums.z + ", " + nums.i + ", " + nums.j + ", " + nums.k
 
 	#same thing but shorter with ! after the table to prevent repetition
@@ -349,8 +394,8 @@ main:
 	words = split(" ", text)
 	lines = split(text)
 	threeLines = split("\n", text, 2)
-	subbed = sub("\s", 0, text)
-	twoSubbed = sub("\s", 0, text, 2)
+	text.replace("\s", "")
+	text.replaceAll("\s*", "")
 	ms = regex("\w", "this is the way")
 	print ms.matched
 	firstGroup = ms.group(0)
