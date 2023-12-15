@@ -371,18 +371,6 @@ main:
 	#times the value by it's self for every value in the array
 	for array = _ ** 2
 
-	for 0..20:
-		print _0
-
-	for 0..10:
-		for 0..10:
-			print _0 + ", " + _1
-
-	for 0..10:
-		for 0..10:
-			for 0..10:
-				print _0 + ", " + _1 + ", " + _2
-
 	while i > 0:
 		print i--
 
@@ -491,6 +479,9 @@ funcGame:
 
 funcParam(x, y):
 	return x * y
+
+switchVars(x, y):
+	return y, x
 
 typedParam(int x, int y):
 	return x + y
