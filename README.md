@@ -32,7 +32,7 @@ enum Type:
 
 #main: is the entry point
 main:
-	#dynamic weak typing by default
+	#dynamic weak typing by default, so it's less verbose
 	i = 5
   	j = 2, k = 4, l = 8
 
@@ -46,8 +46,20 @@ main:
 	char c = 'a'
 	byte by = 2
 
-	#alternate to setting a type, the type is infered from right hand side and the type can't be changed
-	allwaysInteger := 64
+	alive = true
+	dead = false
+	undead = !alive
+
+	#prints true
+	print true or false
+	print false or true
+
+	#prints false
+	print false or false
+	print true and false
+
+	notHere = null
+	print notHere or "value is null"
 
 	iBool = (bool) i
 	iFloat = (float) i
@@ -59,6 +71,7 @@ main:
 	strFloat = str2.parse to float or 0.0f
 	strError = str3.parse to bool or throw error "this is an error."
 
+	#text manipulation
 	text = "This is some text."
 	otherText = "So is this."
 	letter2 = text[2]
@@ -143,10 +156,10 @@ main:
 	log("logs", "first log.")
 	log("logs", "this is the second log.")
 
-	time = now
-	print . * 10
+	begin = now
+	print "." * 10
 	after = now
-	print difference = after - time
+	print difference = after - begin
 
 	print "it is " + now.hour + ":" + now.minute + ":" + now.second + now.am? "AM" || "PM" + " "+ now.year + "-" + now.month + "-" + now.day + " on a " + now.dayOfWeek + now.weekend? ", it's the weekend!" || "."
 \
@@ -205,21 +218,6 @@ main:
 	yr = &year
 	#prints 2023
 	print *yr
-
-	alive = true
-	dead = false
-	undead = !alive
-
-	#prints true
-	print true or false
-	print false or true
-
-	#prints false
-	print false or false
-	print true and false
-
-	notHere = null
-	print notHere or "value is null"
 
 	#do creates a new scope
 	do:
@@ -480,6 +478,7 @@ funcGame:
 funcParam(x, y):
 	return x * y
 
+#muliple variable returns from a function
 switchVars(x, y):
 	return y, x
 
@@ -502,7 +501,7 @@ constFUnc:
 	final
 	
 	string s = "this can't be changed."
-	string ss = "this also."
+	string ss = "this as well."
 	string sss = "etc..."
 
 	return s + ss + sss
@@ -543,7 +542,7 @@ string typeIdentifier(anything):
 class Game:
 	alive = true
 	undead = false
-	Game:
+	new:
 		run: print "creating a new thread and starting the game loop", loop
 	loop:
 		while alive or undead:
@@ -562,7 +561,7 @@ class Game:
 class XGame is a Game:
 	xs = 1
 	xStr = ""
-	XGame: super, print "died"
+	new: super, print "died"
 
 	protected
 
@@ -574,7 +573,7 @@ class XGame is a Game:
 class Cat:
   	#members are private by default, public or protected can be called, then later members are st to either public or protected
 	x, y = 0
-	Cat(x, y):
+	new(x, y):
     		#this is used to make the following variables to this, x and y is mapped to the private x and y members
 		this x, y = x, y
 	privateFunction:
@@ -597,7 +596,7 @@ class Cat:
 
 class Tiger is a Cat:
 	claws = "sharp"
-	Tiger(x, y):
+	new(x, y):
 		super(x, y)
 		print "after Cat's init"
 	public
